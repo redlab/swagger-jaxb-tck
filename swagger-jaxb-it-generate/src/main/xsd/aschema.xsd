@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/aschema" xmlns:tns="http://www.example.org/aschema" elementFormDefault="qualified">
+	<element name="root">
+		<complexType>
+			<sequence>
+				<element name="subs" minOccurs="1" maxOccurs="1" type="tns:subtype" />
+				<element name="aShort" minOccurs="1" maxOccurs="1" type="short" />
+				<element name="aString" minOccurs="1" maxOccurs="1" type="string" />
+				<element name="abool" minOccurs="1" maxOccurs="1" type="boolean" />
+				<element name="adatetime" minOccurs="1" maxOccurs="1" type="dateTime" />
+				<element name="manybyte" minOccurs="0" maxOccurs="unbounded" type="byte" />
+				<element name="abyte" minOccurs="0" maxOccurs="1" type="byte" />
+				<element name="adouble" minOccurs="0" maxOccurs="1" type="double" />
+				<element name="along" minOccurs="0" maxOccurs="1" type="long" />
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="subtype">
+		<sequence>
+			<element name="list" minOccurs="1" maxOccurs="unbounded" type="string" />
+		</sequence>
+	</complexType>
+</schema>
