@@ -13,6 +13,7 @@
 package be.redlab.jaxb.swagger.test;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import com.example.api.model.Root;
@@ -24,8 +25,25 @@ import com.wordnik.swagger.annotations.ApiClass;
  */
 public class ClassAnnotationsTest {
 
+	private ApiClass apiClass;
+
+	@Before
+	public void getAnnotation() {
+		apiClass = Root.class.getAnnotation(ApiClass.class);
+	}
+
 	@Test
 	public void annotationsAvailable() {
-		Assert.assertNotNull("ApiClass not found on method", Root.class.getAnnotation(ApiClass.class));
+		failOnNullAnnotation();
+	}
+
+	@Test
+	public void annotationDescription() {
+		failOnNullAnnotation();
+		Assert.assertEquals("Root", apiClass.value());
+	}
+
+	protected void failOnNullAnnotation() {
+		Assert.assertNotNull("ApiClass not found on method", apiClass);
 	}
 }

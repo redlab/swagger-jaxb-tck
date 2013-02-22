@@ -28,14 +28,38 @@ import com.wordnik.swagger.annotations.ApiProperty;
 public class StringTest {
 
 	private Method method;
+	private ApiProperty apiProperty;
 
 	@Before
 	public void setup() throws NoSuchMethodException, SecurityException {
-		method = Root.class.getMethod("getSubs");
+		method = Root.class.getMethod("getAString");
+		apiProperty = method.getAnnotation(ApiProperty.class);
 	}
 
 	@Test
-	public void annotationsAvailable() {
-		Assert.assertNotNull("ApiProperty not found on method", method.getAnnotation(ApiProperty.class));
+	public void annotationNotNull() {
+		failIfNoAnnotation();
+	}
+
+	@Test
+	public void typeIsCorrect() {
+		failIfNoAnnotation();
+		Assert.assertEquals("string", apiProperty.dataType());
+	}
+
+	@Test
+	public void nameIsCorrect() {
+		failIfNoAnnotation();
+		Assert.assertEquals("aString", apiProperty.value());
+	}
+
+	@Test
+	public void requiredIsTrue() {
+		failIfNoAnnotation();
+		Assert.assertEquals(true, apiProperty.required());
+	}
+
+	protected void failIfNoAnnotation() {
+		Assert.assertNotNull("ApiProperty not found on method", apiProperty);
 	}
 }
