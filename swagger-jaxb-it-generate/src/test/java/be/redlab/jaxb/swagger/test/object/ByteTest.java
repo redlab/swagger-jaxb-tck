@@ -22,19 +22,19 @@ import com.example.api.model.SubType;
 import com.wordnik.swagger.annotations.ApiProperty;
 
 /**
- * XSD type long mapped to Swagger long
+ * XML byte mapped to Java byte mapped to Swagger byte
  *
  * @author redlab
  *
  */
-public class LongTest {
+public class ByteTest {
 
 	private Method method;
 	private ApiProperty apiProperty;
 
 	@Before
 	public void setup() throws NoSuchMethodException, SecurityException {
-		method = SubType.class.getMethod("getLongElement");
+		method = SubType.class.getMethod("getByteElement");
 		apiProperty = method.getAnnotation(ApiProperty.class);
 	}
 
@@ -46,19 +46,19 @@ public class LongTest {
 	@Test
 	public void typeIsCorrect() {
 		failIfNoAnnotation();
-		Assert.assertEquals("long", apiProperty.dataType());
+		Assert.assertEquals("byte", apiProperty.dataType());
 	}
 
 	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
-		Assert.assertEquals("longElement", apiProperty.value());
+		Assert.assertEquals("byteElement", apiProperty.value());
 	}
 
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(true, apiProperty.required());
+		Assert.assertEquals(false, apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {
