@@ -3,7 +3,7 @@
 	<element name="root">
 		<complexType>
 			<sequence>
-				<element name="subs" minOccurs="1" maxOccurs="1" type="tns:subtype" />
+				<element name="subHolder" minOccurs="1" maxOccurs="1" type="tns:subType" />
 				<element name="aShort" minOccurs="1" maxOccurs="1" type="short" />
 				<element name="aString" minOccurs="1" maxOccurs="1" type="string" />
 				<element name="abool" minOccurs="1" maxOccurs="1" type="boolean" />
@@ -16,7 +16,7 @@
 		</complexType>
 	</element>
 
-	<complexType name="subtype">
+	<complexType name="subType">
 		<sequence>
 			<element name="list" minOccurs="1" maxOccurs="unbounded" type="string" />
 		</sequence>
