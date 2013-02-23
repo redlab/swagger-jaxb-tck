@@ -31,6 +31,7 @@
 			<element name="longElement" minOccurs="0" maxOccurs="1" type="long" />
 			<element name="floatElement" minOccurs="0" maxOccurs="1" type="float" />
 			<element name="doubleElement" minOccurs="0" maxOccurs="1" type="double" />
+			<element name="aString" minOccurs="0" maxOccurs="1" type="string" />
 		</sequence>
 	</complexType>
 </schema>
