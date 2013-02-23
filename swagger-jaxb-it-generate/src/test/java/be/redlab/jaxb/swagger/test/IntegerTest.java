@@ -25,14 +25,14 @@ import com.wordnik.swagger.annotations.ApiProperty;
  * @author redlab
  *
  */
-public class ListTest {
+public class IntegerTest {
 
 	private Method method;
 	private ApiProperty apiProperty;
 
 	@Before
 	public void setup() throws NoSuchMethodException, SecurityException {
-		method = Root.class.getMethod("getManybyte");
+		method = Root.class.getMethod("getIntElement");
 		apiProperty = method.getAnnotation(ApiProperty.class);
 	}
 
@@ -44,13 +44,13 @@ public class ListTest {
 	@Test
 	public void typeIsCorrect() {
 		failIfNoAnnotation();
-		Assert.assertEquals("List", apiProperty.dataType());
+		Assert.assertEquals("int", apiProperty.dataType());
 	}
 
 	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
-		Assert.assertEquals("manybyte", apiProperty.value());
+		Assert.assertEquals("intElement", apiProperty.value());
 	}
 
 	@Test

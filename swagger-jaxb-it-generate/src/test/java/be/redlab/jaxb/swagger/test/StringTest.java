@@ -54,7 +54,7 @@ public class StringTest {
 	}
 
 	@Test
-	public void requiredIsTrue() {
+	public void required() {
 		failIfNoAnnotation();
 		Assert.assertEquals(true, apiProperty.required());
 	}

@@ -22,17 +22,19 @@ import com.example.api.model.Root;
 import com.wordnik.swagger.annotations.ApiProperty;
 
 /**
+ * XML integer mapped to Java BigInteger mapped to Swagger long
+ * 
  * @author redlab
- *
+ * 
  */
-public class ListTest {
+public class BigIntegerTest {
 
 	private Method method;
 	private ApiProperty apiProperty;
 
 	@Before
 	public void setup() throws NoSuchMethodException, SecurityException {
-		method = Root.class.getMethod("getManybyte");
+		method = Root.class.getMethod("getIntegerElement");
 		apiProperty = method.getAnnotation(ApiProperty.class);
 	}
 
@@ -44,19 +46,19 @@ public class ListTest {
 	@Test
 	public void typeIsCorrect() {
 		failIfNoAnnotation();
-		Assert.assertEquals("List", apiProperty.dataType());
+		Assert.assertEquals("long", apiProperty.dataType());
 	}
 
 	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
-		Assert.assertEquals("manybyte", apiProperty.value());
+		Assert.assertEquals("integerElement", apiProperty.value());
 	}
 
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(false, apiProperty.required());
+		Assert.assertEquals(true, apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {

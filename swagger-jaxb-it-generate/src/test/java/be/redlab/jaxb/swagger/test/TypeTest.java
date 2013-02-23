@@ -54,7 +54,7 @@ public class TypeTest {
 	}
 
 	@Test
-	public void requiredIsTrue() {
+	public void required() {
 		failIfNoAnnotation();
 		Assert.assertEquals(true, apiProperty.required());
 	}

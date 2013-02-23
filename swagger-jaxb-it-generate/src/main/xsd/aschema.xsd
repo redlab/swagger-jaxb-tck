@@ -4,14 +4,18 @@
 		<complexType>
 			<sequence>
 				<element name="subHolder" minOccurs="1" maxOccurs="1" type="tns:subType" />
-				<element name="aShort" minOccurs="1" maxOccurs="1" type="short" />
 				<element name="aString" minOccurs="1" maxOccurs="1" type="string" />
-				<element name="abool" minOccurs="1" maxOccurs="1" type="boolean" />
-				<element name="adatetime" minOccurs="1" maxOccurs="1" type="dateTime" />
+				<element name="boolElement" minOccurs="1" maxOccurs="1" type="boolean" />
+				<element name="datetimeElement" minOccurs="1" maxOccurs="1" type="dateTime" />
 				<element name="manybyte" minOccurs="0" maxOccurs="unbounded" type="byte" />
-				<element name="abyte" minOccurs="0" maxOccurs="1" type="byte" />
-				<element name="adouble" minOccurs="0" maxOccurs="1" type="double" />
-				<element name="along" minOccurs="0" maxOccurs="1" type="long" />
+				<element name="byteElement" minOccurs="0" maxOccurs="1" type="byte" />
+				<element name="shortElement" minOccurs="1" maxOccurs="1" type="short" />
+				<element name="intElement" minOccurs="1" maxOccurs="1" type="int" />
+				<element name="integerElement" minOccurs="1" maxOccurs="1" type="integer" />
+				<element name="longElement" minOccurs="0" maxOccurs="1" type="long" />
+				<element name="floatElement" minOccurs="1" maxOccurs="1" type="float" />
+				<element name="doubleElement" minOccurs="0" maxOccurs="1" type="double" />
+				<element name="dateElement" minOccurs="1" maxOccurs="1" type="date" />
 			</sequence>
 		</complexType>
 	</element>
