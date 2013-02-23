@@ -23,9 +23,9 @@ import com.wordnik.swagger.annotations.ApiProperty;
 
 /**
  * XML double mapped to Java double mapped to Swagger double
- * 
+ *
  * @author redlab
- * 
+ *
  */
 public class DoubleTest {
 
@@ -58,7 +58,7 @@ public class DoubleTest {
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(false, apiProperty.required());
+		Assert.assertEquals(true, apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {

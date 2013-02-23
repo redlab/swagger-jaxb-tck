@@ -23,9 +23,9 @@ import com.wordnik.swagger.annotations.ApiProperty;
 
 /**
  * XSD type int
- * 
+ *
  * @author redlab
- * 
+ *
  */
 public class IntTest {
 
@@ -58,7 +58,7 @@ public class IntTest {
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(false, apiProperty.required());
+		Assert.assertEquals(true, apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {

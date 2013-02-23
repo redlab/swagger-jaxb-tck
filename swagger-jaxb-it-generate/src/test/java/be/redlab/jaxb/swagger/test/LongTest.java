@@ -58,7 +58,7 @@ public class LongTest {
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(false, apiProperty.required());
+		Assert.assertEquals(true, apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {

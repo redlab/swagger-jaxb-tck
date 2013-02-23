@@ -23,9 +23,9 @@ import com.wordnik.swagger.annotations.ApiProperty;
 
 /**
  * XML short mapped to Java short mapped to Swagger int
- * 
+ *
  * @author redlab
- * 
+ *
  */
 public class ShortTest {
 
@@ -58,7 +58,7 @@ public class ShortTest {
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(false, apiProperty.required());
+		Assert.assertEquals(true, apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {
