@@ -10,5 +10,6 @@
 	</properties>
 	<modules>
 		<module>swagger-jaxb-it-generate</module>
+		<module>swagger-jaxb-web</module>
 	</modules>
 </project>
