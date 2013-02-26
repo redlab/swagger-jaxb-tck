@@ -16,6 +16,7 @@
 				<element name="longElement" minOccurs="1" maxOccurs="1" type="long" />
 				<element name="floatElement" minOccurs="1" maxOccurs="1" type="float" />
 				<element name="doubleElement" minOccurs="1" maxOccurs="1" type="double" />
+				<element name="enumElement" minOccurs="1" maxOccurs="1" type="tns:simpleEnum" />
 			</sequence>
 		</complexType>
 	</element>
@@ -34,4 +35,12 @@
 			<element name="aString" minOccurs="0" maxOccurs="1" type="string" />
 		</sequence>
 	</complexType>
+	
+	<simpleType name="simpleEnum">
+		<restriction base="string">
+			<enumeration value="ONE" />
+			<enumeration value="TWO" />
+			<enumeration value="THREE" />
+		</restriction>
+	</simpleType>
 </schema>
