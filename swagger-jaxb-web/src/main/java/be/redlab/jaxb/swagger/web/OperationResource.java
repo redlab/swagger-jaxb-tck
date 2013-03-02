@@ -36,7 +36,7 @@ import com.wordnik.swagger.annotations.ApiParam;
  */
 @Path("/simple")
 @Api(value = "/simple", description = "A simple resource, no request payloads.")
-public class DemoResource {
+public class OperationResource {
 
 	private final OperatorFactory operatorFactory = new BasicOperatorFactory();
 
