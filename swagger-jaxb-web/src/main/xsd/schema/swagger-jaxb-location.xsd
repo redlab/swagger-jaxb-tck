@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.redlab.be/swagger-jaxb-location" xmlns:loc="http://www.redlab.be/swagger-jaxb-location"
+	elementFormDefault="qualified">
+	<!-- Tree view // the thing that resulted in Swagger JavaScript stack overflow -->
+	<xsd:element name="locationElement">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="location" minOccurs="1" maxOccurs="unbounded" type="loc:location" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="location">
+		<xsd:sequence>
+			<xsd:element name="id" minOccurs="1" maxOccurs="1" type="xsd:long" />
+			<xsd:element name="name" minOccurs="1" maxOccurs="1" type="xsd:string" />
+			<xsd:element name="type" minOccurs="1" maxOccurs="1" type="loc:locationType" />
+			<xsd:element name="parent" minOccurs="0" maxOccurs="1" type="loc:location" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:simpleType name="locationType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="NEIGBOURHOUD" />
+			<xsd:enumeration value="SUBCOMMUNITY" />
+			<xsd:enumeration value="COMMUNITY" />
+			<xsd:enumeration value="JURIDICAL_REGION" />
+			<xsd:enumeration value="REGION" />
+			<xsd:enumeration value="STATE" />
+			<xsd:enumeration value="COUNTRY" />
+			<xsd:enumeration value="CONTINENT" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

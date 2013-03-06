@@ -14,7 +14,6 @@ package be.redlab.jaxb.swagger.ctx;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +24,7 @@ import com.wordnik.swagger.jaxrs.JaxrsApiReader;
  * @author redlab
  *
  */
-@WebListener
+// @WebListener
 public class SwaggerJaxbWebContextListener implements ServletContextListener {
 
 	private static final Logger LOG = LoggerFactory.getLogger(SwaggerJaxbWebContextListener.class);

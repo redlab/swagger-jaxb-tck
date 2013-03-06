@@ -12,7 +12,11 @@
 		<param-name>be.redlab.logback.default</param-name>
 		<param-value>debug</param-value>
 	</context-param>
-
+	<servlet>
+		<servlet-name>bootstrap</servlet-name>
+		<servlet-class>be.redlab.jaxb.swagger.web.BootstrapServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 	<servlet>
 		<servlet-name>Jersey Web Application</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
@@ -32,7 +36,7 @@
 			<param-name>api.version</param-name>
 			<param-value>1.0</param-value>
 		</init-param>
-		<load-on-startup>1</load-on-startup>
+		<load-on-startup>2</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey Web Application</servlet-name>
