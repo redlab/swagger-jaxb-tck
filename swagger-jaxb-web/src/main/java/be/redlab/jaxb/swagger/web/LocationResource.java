@@ -35,7 +35,7 @@ public class LocationResource {
 
 	@GET()
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-	@ApiOperation(httpMethod = "GET", responseClass = "be.redlab.jaxb.swagger.generated.model.Location",
+	@ApiOperation(httpMethod = "GET", responseClass = "be.redlab.jaxb.swagger.generated.model.LocationElement",
 			value = "calculate something with two double values")
 	public Response getLocation(@QueryParam("t") final LocationType type, @QueryParam("s") final String search) {
 		return Response.status(740).header("Warning", "740 - Computer says no").build();
