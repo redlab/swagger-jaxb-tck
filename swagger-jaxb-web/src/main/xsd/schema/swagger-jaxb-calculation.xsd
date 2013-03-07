@@ -3,7 +3,7 @@
 	targetNamespace="http://www.redlab.be/swagger-jaxb-web" xmlns:sjw="http://www.redlab.be/swagger-jaxb-web"
 	elementFormDefault="qualified">
 	<!-- Calculation things -->
-	<xsd:element name="calculationResponseType">
+	<xsd:element name="CalculationResponseType">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="operation" minOccurs="1" maxOccurs="1" type="sjw:operationType" />
