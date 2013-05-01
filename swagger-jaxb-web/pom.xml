@@ -142,10 +142,15 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.2.7</version>
 		</dependency>
-		<dependency>
+		<!-- dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
 			<version>1.17.1</version>
+		</dependency -->
+		<dependency>
+			<groupId>be.redlab.jersey</groupId>
+			<artifactId>http-7xx</artifactId>
+			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>

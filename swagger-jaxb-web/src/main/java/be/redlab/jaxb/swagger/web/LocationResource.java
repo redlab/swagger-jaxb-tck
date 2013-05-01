@@ -20,9 +20,12 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import be.redlab.jaxb.swagger.generated.model.LocationType;
+import be.redlab.jersey.status.HttpStatus7xx;
 
 import com.wordnik.swagger.annotations.Api;
 import com.wordnik.swagger.annotations.ApiOperation;
+import com.wordnik.swagger.annotations.ApiParam;
+import com.wordnik.swagger.annotations.ApiResponse;
 
 /**
  * @author redlab
@@ -36,8 +39,10 @@ public class LocationResource {
 	@GET()
 	@Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	@ApiOperation(httpMethod = "GET", responseClass = "be.redlab.jaxb.swagger.generated.model.LocationElement",
-			value = "calculate something with two double values")
-	public Response getLocation(@QueryParam("t") final LocationType type, @QueryParam("s") final String search) {
-		return Response.status(740).header("Warning", "740 - Computer says no").build();
+			value = "find a location")
+	@ApiResponse(value = "be.redlab.jaxb.swagger.generated.model.LocationElement")
+	public Response getLocation(@ApiParam(value = "The type of location") @QueryParam("t") final LocationType type,
+			@ApiParam(value = "a string to search for") @QueryParam("s") final String search) {
+		return Response.status(HttpStatus7xx.A_KITTEN_DIES).build();
 	}
 }
