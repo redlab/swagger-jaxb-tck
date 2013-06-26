@@ -8,7 +8,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<swagger.version>1.2.5</swagger.version>
-		<jersey.version>1.17.2</jersey.version>
+		<jersey.version>1.17.1</jersey.version>
 	</properties>
 	<modules>
 		<module>swagger-jaxb-it-generate</module>
