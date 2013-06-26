@@ -10,7 +10,7 @@
 	</context-param>
 	<context-param>
 		<param-name>be.redlab.logback.default</param-name>
-		<param-value>debug</param-value>
+		<param-value>trace</param-value>
 	</context-param>
 	<servlet>
 		<servlet-name>bootstrap</servlet-name>
@@ -30,7 +30,7 @@
 		</init-param>
 		<init-param>
 			<param-name>swagger.api.basepath</param-name>
-			<param-value>http://swagger-jaxb-demo.redlab.cloudbees.net/api/</param-value>
+			<param-value>http://localhost:8080/swagger-jaxb-web/api/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>api.version</param-name>
