@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://www.redlab.be/swagger-jaxb-web" xmlns:sjw="http://www.redlab.be/swagger-jaxb-web"
+	targetNamespace="http://www.redlab.be/swagger-jaxb-calc" xmlns:sjw="http://www.redlab.be/swagger-jaxb-calc"
 	elementFormDefault="qualified">
 	<!-- Calculation things -->
 	<xsd:element name="CalculationResponseType">
@@ -11,9 +11,9 @@
 				<xsd:element name="x2" minOccurs="1" maxOccurs="1" type="xsd:double" />
 				<xsd:element name="result" minOccurs="0" maxOccurs="1" type="xsd:double" />
 			</xsd:sequence>
-		</xsd:complexType>	
+		</xsd:complexType>
 	</xsd:element>
-	
+
 	<xsd:complexType name="operation">
 		<xsd:sequence>
 			<xsd:element name="operation" minOccurs="1" maxOccurs="1" type="sjw:operationType" />
@@ -21,7 +21,7 @@
 			<xsd:element name="x2" minOccurs="1" maxOccurs="1" type="xsd:double" />
 		</xsd:sequence>
 	</xsd:complexType>
-	
+
 	<xsd:simpleType name="operationType">
 		<xsd:restriction base="xsd:string">
 			<xsd:enumeration value="ADD" />
