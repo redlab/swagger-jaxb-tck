@@ -47,12 +47,6 @@ public class DateTimeTest {
 	}
 
 	@Test
-	public void typeIsCorrect() {
-		failIfNoAnnotation();
-		Assert.assertEquals("date", apiProperty.dataType());
-	}
-
-	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
 		Assert.assertEquals("dateElement", apiProperty.value());

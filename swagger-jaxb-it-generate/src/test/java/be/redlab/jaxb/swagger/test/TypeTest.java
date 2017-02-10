@@ -45,12 +45,6 @@ public class TypeTest {
 	}
 
 	@Test
-	public void typeIsCorrect() {
-		failIfNoAnnotation();
-		Assert.assertEquals("SubType", apiProperty.dataType());
-	}
-
-	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
 		Assert.assertEquals("subHolder", apiProperty.value());

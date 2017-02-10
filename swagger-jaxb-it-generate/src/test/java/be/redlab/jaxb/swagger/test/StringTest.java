@@ -45,12 +45,6 @@ public class StringTest {
 	}
 
 	@Test
-	public void typeIsCorrect() {
-		failIfNoAnnotation();
-		Assert.assertEquals("string", apiProperty.dataType());
-	}
-
-	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
 		Assert.assertEquals("aString", apiProperty.value());

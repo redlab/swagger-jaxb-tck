@@ -45,12 +45,6 @@ public class ListTest {
 	}
 
 	@Test
-	public void typeIsCorrect() {
-		failIfNoAnnotation();
-		Assert.assertEquals("List", apiProperty.dataType());
-	}
-
-	@Test
 	public void nameIsCorrect() {
 		failIfNoAnnotation();
 		Assert.assertEquals("manybyte", apiProperty.value());

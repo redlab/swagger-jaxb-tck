@@ -46,11 +46,6 @@ public class DoubleTest {
 		failIfNoAnnotation();
 	}
 
-	@Test
-	public void typeIsCorrect() {
-		failIfNoAnnotation();
-		Assert.assertEquals("double", apiProperty.dataType());
-	}
 
 	@Test
 	public void nameIsCorrect() {
