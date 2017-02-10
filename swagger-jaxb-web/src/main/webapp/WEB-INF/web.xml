@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	id="WebApp_ID" version="3.0">
+		 xmlns="http://java.sun.com/xml/ns/javaee"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		 id="WebApp_ID" version="3.0">
 	<display-name>test</display-name>
 	<context-param>
 		<param-name>be.redlab.logback.location</param-name>
@@ -22,7 +22,12 @@
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>be.redlab.jaxb.swagger.web;com.fasterxml.jackson.jaxrs.json;com.wordnik.swagger.jaxrs.listing</param-value>
+			<param-value>
+				io.swagger.jaxrs.json,
+				io.swagger.jaxrs.listing,
+				be.redlab.jaxb.swagger.web,
+				com.fasterxml.jackson.jaxrs.json
+			</param-value>
 		</init-param>
 		<init-param>
 			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
@@ -30,7 +35,7 @@
 		</init-param>
 		<init-param>
 			<param-name>swagger.api.basepath</param-name>
-			<param-value>http://swagger-jaxb-demo.redlab.cloudbees.net/api/</param-value>
+			<param-value>http://localhost:8080/swagger-jaxb-web/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>api.version</param-name>
