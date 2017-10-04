@@ -75,7 +75,9 @@
 							<goal>xjc</goal>
 						</goals>
 						<configuration>
-							<arguments>-swaggerify</arguments>
+							<arguments>
+								<argument>-swaggerify</argument>
+							</arguments>
 							<clearOutputDir>true</clearOutputDir>
 							<!-- bindingDirectory>${project.basedir}/src/main/xsd/bindings</bindingDirectory -->
 							<packageName>be.redlab.jaxb.swagger.generated.model</packageName>
