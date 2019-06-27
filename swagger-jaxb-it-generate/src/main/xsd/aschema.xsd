@@ -6,11 +6,7 @@
 		</annotation>
 		<complexType>
 			<sequence>
-				<element name="subHolder" minOccurs="1" maxOccurs="1" type="tns:subType">
-                    <annotation>
-                        <documentation>A Subtype</documentation>
-                    </annotation>
-                </element>
+				<element name="subHolder" minOccurs="1" maxOccurs="1" type="tns:subType" />
 				<element name="aString" minOccurs="1" maxOccurs="1" type="string" />
 				<element name="datetimeElement" minOccurs="1" maxOccurs="1" type="dateTime" />
 				<element name="dateElement" minOccurs="1" maxOccurs="1" type="date" />
