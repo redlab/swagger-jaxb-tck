@@ -57,7 +57,7 @@
 					<dependency>
 						<groupId>be.redlab.jaxb</groupId>
 						<artifactId>swagger-jaxb</artifactId>
-						<version>1.5</version>
+						<version>1.6</version>
 					</dependency>
 				</dependencies>
 			</plugin>

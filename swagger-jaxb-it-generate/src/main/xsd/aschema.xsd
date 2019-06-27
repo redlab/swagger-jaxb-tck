@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/aschema" xmlns:tns="http://www.example.org/aschema" elementFormDefault="qualified">
 	<element name="root">
+		<annotation>
+			<documentation>The Root</documentation>
+		</annotation>
 		<complexType>
 			<sequence>
-				<element name="subHolder" minOccurs="1" maxOccurs="1" type="tns:subType" />
+				<element name="subHolder" minOccurs="1" maxOccurs="1" type="tns:subType">
+                    <annotation>
+                        <documentation>A Subtype</documentation>
+                    </annotation>
+                </element>
 				<element name="aString" minOccurs="1" maxOccurs="1" type="string" />
 				<element name="datetimeElement" minOccurs="1" maxOccurs="1" type="dateTime" />
 				<element name="dateElement" minOccurs="1" maxOccurs="1" type="date" />

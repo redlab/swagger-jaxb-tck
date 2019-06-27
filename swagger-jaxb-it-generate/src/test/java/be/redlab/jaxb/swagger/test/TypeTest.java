@@ -53,7 +53,7 @@ public class TypeTest {
 	@Test
 	public void required() {
 		failIfNoAnnotation();
-		Assert.assertEquals(true, apiProperty.required());
+		Assert.assertTrue(apiProperty.required());
 	}
 
 	protected void failIfNoAnnotation() {
